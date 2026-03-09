@@ -1,17 +1,49 @@
-public class OopsBanner {
-    public static void main(String[] args) {
-        String[] lines = new String[7];
-
-        lines[0] = String.join(" ","   ****   ","   ****    ","  *******  ","   ***** ");
-        lines[1] = String.join(" ","  **  **  ","  **  **   ","  **    ** "," **    ");
-        lines[2] = String.join(" "," **    ** "," **    **  ","  **    ** ","  **    ");
-        lines[3] = String.join(" "," **    ** "," **    **  ","  *******  ","    *** ");
-        lines[4] = String.join(" "," **    ** "," **    **  ","  **       ","       **");
-        lines[5] = String.join(" ","  **  **  ","  **  **   ","  **       ","       **");
-        lines[6] = String.join(" ","   ****   ","   ****    ","  **       ","   ***** ");
+public class OopsBanner{
+    public static String[] getO1Pattern(){
+        return new String[]{
+            "*****",
+            "*   *",
+            "*   *",
+            "*   *",
+            "*****"
+        };
+    }
+    public static String[] getO2Pattern(){
+        return new String[]{
+            "*****",
+            "*   *",
+            "*   *",
+            "*   *",
+            "*****"
+        };
+    }
+    public static String[] getPPattern(){
+        return new String[]{
+            "*****",
+            "*   *",
+            "*****",
+            "*    ",
+            "*    "
+        };
+    }
+    public static String[] getSPattern(){
+        return new String[]{
+            "******",
+            "*     ",
+            "******",
+            "     *",
+            "******"
+        };
+    }
+    public static void main(String[] args){
         
-        for (String line : lines) {
-            System.out.println(line); 
-        } 
+        String[] O1Pattern = getO1Pattern();
+        String[] O2Pattern = getO2Pattern();
+        String[] PPattern = getPPattern();
+        String[] SPattern = getSPattern();
+
+        for (int i=0;i<O1Pattern.length;i++){
+            System.out.println(O1Pattern[i]+" "+O2Pattern[i]+" "+PPattern[i]+" "+SPattern[i]);
+        }
     }
 }
